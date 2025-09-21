@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .content {
+            background-color: #f8fafc;
+            padding: 30px 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #dbeafe;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #2563eb;
+            margin: 20px 0;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Thank You!</h1>
+    <p>Your message has been received successfully</p>
+</div>
+
+<div class="content">
+    <div class="greeting">
+        Hello <span th:text="${name}">John</span>,
+    </div>
+
+    <p>Thank you for reaching out through my portfolio website! I really appreciate your interest in my work.</p>
+
+    <div class="highlight">
+        <strong>What happens next?</strong><br>
+        I'll review your message carefully and get back to you within 24-48 hours. In the meantime, feel free to check out my latest projects and connect with me on social media.
+    </div>
+
+    <p>If your message is urgent or if you don't hear back from me within a reasonable time, please don't hesitate to reach out again.</p>
+
+    <p>Best regards,<br>
+        <strong>Anirudh Deveram</strong><br>
+        Computer Science & Data Science Student at Rutgers University<br>
+        </p>
+</div>
+
+<div class="footer">
+    <p>This is an automated confirmation email.</p>
+    <div class="social-links">
+        <a href="https://github.com/orangeuaswe">GitHub</a>
+        <a href="https://linkedin.com/in/anirudhdeveram">LinkedIn</a>
+        <a href="mailto:anirudhdeveram@gmail.com">Email</a>
+    </div>
+</div>
+</body>
+</html>
