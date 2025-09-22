@@ -8,12 +8,12 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
+import java.util.List;
 @Configuration
-public class WebConfig 
+public class WebConfig
 {
     @Bean
-    public CorsConfiguration corsConfigurationSource()
+    public UrlBasedCorsConfigurationSource corsConfigurationSource()
     {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of("http://localhost:3000", "https://deveram.guru"));
@@ -25,11 +25,7 @@ public class WebConfig
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;
-        
+
     }
-    @Bean
-    public CorsFilter cors(CorsConfigurationSource source)
-    {
-        return new CorsFilter(source);
-    }
+
 }
